@@ -1,12 +1,14 @@
 # This script opens an excel file linked to sharepoint, allows it to update, then closes the file. 
 # The script then calls a java file, which checks the status of the sharepoint file.
-# All output is logged in 
+# All output is logged in loanerLog.txt
 # Written By: Brittany Deventer
 # 2/3/2018 
 
 
 # Define the file full name.
-$FilePath = "C:\Users\bdeven01\LLProgram\LoanerLaptops.xlsx"
+$FilePath = "\LLProgram\LoanerLaptops.xlsx"
+$logPath = "\LLProgram\loanerLog.txt"
+$jobPath = "\LLProgram\LoanerLaotops.jar"
 
 # Check whether the file exists.
 if (-NOT (Test-Path $FilePath)){
@@ -37,10 +39,8 @@ $objExcel.Quit()
 Start-Sleep 5
 
 # Run LoanerLaptops.jar and append to log file
-java -jar C:\Users\bdeven01\LLProgram\LoanerLaptops.jar | Add-Content C:\users\bdeven01\LLProgram\loanerLog.txt
-# Run again to make sure the refresh worked
-#java -jar C:\Users\bdeven01\Desktop\LoanerLaptops.jar
+java -jar $jobPath $FilePath | Add-Content $logPath
 
 # Open log file
-C:\users\bdeven01\LLProgram\loanerLog.txt
+ii $logPath
 
