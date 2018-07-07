@@ -16,8 +16,8 @@ echo.
 pause
 cls
 
-set packageLocation=\\mpcl01fl\shared\Departments\Client.Services\OverlookMC\USMT\USMT10
-set overlookBackupTarget=\\mpcl01fl\SHARED\Departments\Client.Services\OverlookMC\Client Backups
+set packageLocation=\USMT\USMT10
+set overlookBackupTarget=Client Backups
 set localTarget=c:\USMT10\
 
 Echo Copying USMT10 to local machine (please be patient)
