@@ -1,3 +1,16 @@
+/* 
+* This program reads from an excel file and prompts the user when dates in column 'Date in' are past the current date.
+* Apache POI library is needed.
+*
+* Written By: Brittany Deventer
+* Date: 11/3/2017
+*
+* Sources: 
+* http://www.seleniumeasy.com/jxl-tutorials/how-to-read-excel-file-using-java
+* This is a sample program used as a starting point to build upon.
+* 
+*/
+
 //package com.pack;
 
 import java.io.FileInputStream;
@@ -16,18 +29,6 @@ import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.apache.poi.hssf.usermodel.HSSFDateUtil;
-
-/* This program reads from file share *** and prompts the user when dates in column 'Date in' are past the current date.
-* Written By: Brittany Deventer
-* Sources: 
-* http://www.seleniumeasy.com/jxl-tutorials/how-to-read-excel-file-using-java
-* This is a sample program from the source above.  used as a starting point to build upon
-* 
-* 2/11:  I'd like to expand on this program:  
-*  If a loaner is past due, I'd like an email to be sent to the required technician.
-*  If no technician is in the notes, then an email should be sent to the entire team.  
-*/
-
 
 public class ReadXlsx {
 	
