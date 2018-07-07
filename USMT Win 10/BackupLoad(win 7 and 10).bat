@@ -16,8 +16,8 @@ echo.
 
 cls
 
-set packageLocation=\\mpcl01fl\shared\Departments\Client.Services\OverlookMC\USMT\USMT10
-set overlookBackupTarget=\\mpcl01fl\SHARED\Departments\Client.Services\OverlookMC\Client Backups
+set packageLocation=\USMT\USMT10
+set overlookBackupTarget=\Client Backups
 set localTarget=c:\USMT10\
 
 :: Ask for hostname of old computer
@@ -56,9 +56,9 @@ IF /i %local% == 1 (@echo:)
 
 IF /i %cbu% == 1 (@echo Option 2 Load from Overlook Client Backups)
 IF /i %cbu% == 1 (@echo|set /p="Backed up on: ")
-IF Exist "\\mpcl01fl\iss\public\Overlook\Client Backups\%Hostname%\Userstate\date.file" (type "\\mpcl01fl\iss\public\Overlook\Client Backups\%Hostname%\userstate\date.file" )
+IF Exist "\\mpcl01fl\iss\public\Overlook\Client Backups\%Hostname%\Userstate\date.file" (type "\Client Backups\%Hostname%\userstate\date.file" )
 IF /i %cbu% == 1 (@echo|set /p="Backed up by: ")
-IF Exist "\\mpcl01fl\iss\public\Overlook\Client Backups\%Hostname%\Userstate\user.file" (type "\\mpcl01fl\iss\public\Overlook\Client Backups\%Hostname%\userstate\user.file" )
+IF Exist "\\mpcl01fl\iss\public\Overlook\Client Backups\%Hostname%\Userstate\user.file" (type "\Client Backups\%Hostname%\userstate\user.file" )
 IF /i %cbu% == 1 (@echo:)
 
 IF /i %ct% == 0 (@echo Could not find file!!)
