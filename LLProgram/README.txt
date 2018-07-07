@@ -10,4 +10,4 @@ LoanerLog.txt is the output/log file.
 
 
 
-** This is not meant to be workable on github, it is simply for showcase purposes.  Thank you.
+** This is not meant to be workable on github, it is simply for showcase purposes.  Most filepaths have been omitted. Thank you.
